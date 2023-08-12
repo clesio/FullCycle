@@ -1,4 +1,5 @@
-# Container stage para compilar o programa go
+# Container stage para compilar o programa hello.go
+# Gera o binário hello
 
 FROM golang:1.20.5 AS builder
 
@@ -8,7 +9,7 @@ COPY src/ .
 
 RUN go build
 
-# Imagem mínima para rodar o programa compilado acima
+# Imagem mínima para rodar o programa compilado hello
 
 FROM scratch
 
